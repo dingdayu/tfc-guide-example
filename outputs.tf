@@ -1,8 +1,9 @@
-output "instance_ami" {
-  value = aws_instance.ubuntu.ami
+output "container_id" {
+  description = "ID of the Docker container"
+  value       = docker_container.nginx.id
 }
 
-output "instance_arn" {
-  value = aws_instance.ubuntu.arn
+output "image_id" {
+  description = "ID of the Docker image"
+  value       = docker_image.nginx.id
 }
-
